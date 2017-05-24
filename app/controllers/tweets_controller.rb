@@ -17,7 +17,7 @@ class TweetsController < ApplicationController
     if @tweet.save
       redirect_to root_path, notice:"ツイート！！"
     else
-      render 'new'
+      render 'new',notice:"あかんエラーや原因は自分で考えや"
     end
   end
   
@@ -30,7 +30,7 @@ class TweetsController < ApplicationController
    if @tweet.update(tweets_params) 
      redirect_to root_path
    else
-     render'edit'
+     render'edit',notice:"あかんエラーや原因は自分で考えや"
    end
   end
   
