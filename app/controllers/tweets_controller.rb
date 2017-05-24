@@ -17,7 +17,6 @@ class TweetsController < ApplicationController
     if @tweet.save
       redirect_to root_path, notice:"ツイート！！"
     else
-      flash.now[:notice] = "Some errors occured"
       render 'new'
     end
   end
@@ -31,7 +30,6 @@ class TweetsController < ApplicationController
    if @tweet.update(tweets_params) 
      redirect_to root_path
    else
-     flash.now[:notice] = "Some errors occured"
      render'edit'
    end
   end
