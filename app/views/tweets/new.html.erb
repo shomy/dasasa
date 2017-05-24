@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+     <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+          <%= form_for(@tweet,url:confirm_tweets_path) do |f| %>
+             <%= f.label :ツイート %>
+            <%= f.text_field :content ,class:"form-control" %>
+            <br>
+            <%= f.submit'投稿', class:"btn btn-primary btn-block"  %>
+          <% end %>
+          
+          <%= link_to "ブログ一覧画面にもどる", root_path %>
+      </div>
+  </div>
+</div>
